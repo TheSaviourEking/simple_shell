@@ -14,22 +14,18 @@ int main(int ac __attribute__((unused)), char *av[], char *envp[])
 	pid_t child_pid;
 
 	signal(SIGINT, SIG_IGN);
-
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 			printf("$ ");
-
 		if (getline(&buffer, &n, stdin) == -1)
 			break;
 		if (buffer == NULL)
 			exit(0);
-
 		av = parse_input(buffer);
 		if (!av[0])
 		{
-			free(av);
-			continue;
+			free(av), continue;
 		}
 		if (_strcmp(av[0], "env") == 0)
 		{
@@ -51,6 +47,5 @@ int main(int ac __attribute__((unused)), char *av[], char *envp[])
 		}
 		wait(&status), free(av);
 	}
-	free(buffer);
-	return (0);
+	free(buffer), return (0);
 }
