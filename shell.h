@@ -12,13 +12,13 @@
 
 
 void print_environment(void);
-int _strcmp(char* s1, char* s2);
-char** parse_input(char* buffer);
-char* _strchr(char* s, char c);
-char* path_search(char* cmd);
-char* _strcat(char* dest, char* src);
-char* _strncat(char* dest, char* src, int n);
-int string_length(char* pointer);
+int _strcmp(char *s1, char *s2);
+char **parse_input(char *buffer);
+char *_strchr(char *s, char c);
+char *path_search(char *cmd);
+char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
+int string_length(char *pointer);
 
 
 
