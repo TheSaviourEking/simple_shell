@@ -26,7 +26,7 @@ int main(int ac __attribute__((unused)), char *av[], char *envp[])
 		if (!av[0])
 		{
 			free(av);
-		       	continue;
+			continue;
 		}
 		if (_strcmp(av[0], "env") == 0)
 		{
